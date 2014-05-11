@@ -6,7 +6,6 @@
 temp <- tempfile()
 url <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
 filename <- "household_power_consumption.txt"
-temp <- "exdata-data-household_power_consumption.zip"
 download.file(url, temp, method="curl")
 # Read only the data from the necessary dates into memory.
 a1full <- read.table(unz(temp, filename), colClasses="character", header=T, sep=";")
